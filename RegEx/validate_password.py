@@ -2,7 +2,7 @@ import re
 
 
 def validate_password(password):
-    pattern = r"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[ !\"#$%&'()*+,-.\/:;" +\\
+    pattern = r"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[ !\"#$%&'()*+,-.\/:;" \
         "<=>?@^_`{|}~]).{8,32})"
     password_strength = re.search(pattern, password)
     if password_strength:
